@@ -7,7 +7,12 @@ export const Projects = [
     {
         title:'Click the Box',
         link:'/click-the-box',
-        imageSrc:'/images/click-the-box.png'
-        
+        imageSrc:'/images/click-the-box.png' 
     },
+    {
+        title:'Nested Comment',
+        link:'/nested-comment',
+        imageSrc:'/images/nested-comment.png' 
+    },
+
 ]

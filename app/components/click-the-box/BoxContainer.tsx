@@ -68,7 +68,6 @@ const BoxContainer: React.FC = () => {
         setTimeout(() => {
           setData((prev) => {
             const temp = [...prev];
-            const ind = [...indexQueue];
 
             temp[indexQueue[i] - 1].isClicked = false;
             return temp;
@@ -81,12 +80,12 @@ const BoxContainer: React.FC = () => {
         }, i * 1000);
       }
     }
-  }, [indexQueue.length]);
+  }, [indexQueue]);
 
   const handleBoxClick = (item: BoxDataProps) => {
     if (item.isClicked) return;
     setData((prev) => {
-      const temp = prev?.map((ele, index) => {
+      const temp = prev?.map((ele) => {
         if (item.id !== ele.id) return ele;
         return { ...ele, isClicked: true };
       });

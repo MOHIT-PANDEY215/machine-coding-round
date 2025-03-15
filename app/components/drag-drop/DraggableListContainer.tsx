@@ -4,13 +4,13 @@ import DraggableItem from "./DraggableItem";
 import { STATUS } from "./DraggableContainer";
 
 export interface DraggableItemProps {
-  title: String;
+  title: string;
   id: number;
-  status: String;
+  status: string;
 }
 
 interface DraggableListContainerProps {
-  title: String;
+  title: string;
   items: DraggableItemProps[];
   index: number;
   handleChangeItemData: (data: DraggableItemProps[]) => void;

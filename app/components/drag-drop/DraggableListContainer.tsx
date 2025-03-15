@@ -38,7 +38,7 @@ const DraggableListContainer: React.FC<DraggableListContainerProps> = (
   };
   return (
     <div
-      className="flex flex-col gap-8 border-2 p-4 min-w-[200px] min-h-[300px]"
+      className="flex flex-col gap-8 border-2 p-4 min-w-[300px] min-h-[300px]"
       onDragOver={(e) => handleDragOver(e)}
       onDrop={(e) => handleDrop(e)}
     >

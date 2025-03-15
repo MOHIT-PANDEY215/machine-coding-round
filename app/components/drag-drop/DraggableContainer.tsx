@@ -58,7 +58,8 @@ const DraggableContainer: React.FC = () => {
     setItems(data);
   };
   return (
-    <div className="bg-gray-400 w-1/2 h-full flex gap-4 justify-between px-4 py-2 flex-wrap ">
+    <div className="mx-4">
+      <div className="bg-gray-400 w-full h-full flex gap-4 justify-center px-4 py-2 flex-wrap">
       {listData.map((item, index) => {
         return (
           <DraggableListContainer
@@ -70,6 +71,7 @@ const DraggableContainer: React.FC = () => {
           />
         );
       })}
+    </div>
     </div>
   );
 };

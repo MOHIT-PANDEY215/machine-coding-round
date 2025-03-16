@@ -1,4 +1,4 @@
-import GlobalContainer from "../components/nested-comment/GlobalContainer";
+import GlobalContainer from "@/app/components/nested-comment/GlobalContainer";
 
 
 export default function page() {

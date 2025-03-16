@@ -1,4 +1,4 @@
-import BoxContainer from "../components/click-the-box/BoxContainer";
+import BoxContainer from "@/app/components/click-the-box/BoxContainer";
 
 export default function page(){
 

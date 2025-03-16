@@ -14,5 +14,10 @@ export const Projects = [
         link:'/nested-comment',
         imageSrc:'/images/nested-comment.png' 
     },
+    {
+        title:'Tic Tac Toe',
+        link:'/tic-tac-toe',
+        imageSrc:'/images/tic-tac-toe.png' 
+    },
 
 ]

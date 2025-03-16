@@ -56,7 +56,7 @@ const InputContainer: React.FC<InputContainerProps> = ({
         return addReply(prev);
       }
     });
-    setActiveCommentReplyId && setActiveCommentReplyId(null);
+    setActiveCommentReplyId?.(null);
     setText("");
   };
 

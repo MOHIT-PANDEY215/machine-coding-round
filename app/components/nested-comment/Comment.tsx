@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { CommentDataProps } from "./GlobalContainer";
 import { Button } from "@heroui/react";
 import InputContainer from "./InputContainer";

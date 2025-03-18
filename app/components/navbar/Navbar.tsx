@@ -3,15 +3,20 @@ import React from "react";
 
 const Navbar: React.FC = () => {
   return (
-    <header>
-      <div className="fixed top-0 left-0 w-full bg-gray-700 h-[48px] px-4 py-2 flex items-center justify-between shadow-md z-50">
-        <div className="text-blue-200">Machine Coding Round</div>
+    <header className="fixed top-0 left-0 w-full bg-gray-800 px-6 py-3 shadow-md z-50">
+      <div className="flex items-center justify-between max-w-6xl mx-auto">
+        <h1 className="text-lg sm:text-xl font-semibold text-blue-300">
+          Machine Coding Round
+        </h1>
 
-        <div className="flex-grow flex justify-center">
-          <Link href={"/"} className="text-white">
+        <nav className="flex gap-4">
+          <Link
+            href="/"
+            className="text-white text-sm sm:text-base hover:text-blue-400 transition duration-200"
+          >
             Dashboard
           </Link>
-        </div>
+        </nav>
       </div>
     </header>
   );

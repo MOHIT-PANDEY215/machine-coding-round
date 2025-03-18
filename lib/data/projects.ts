@@ -19,5 +19,10 @@ export const Projects = [
         link:'/tic-tac-toe',
         imageSrc:'/images/tic-tac-toe.png' 
     },
+    {
+        title:'Pagination',
+        link:'/pagination',
+        imageSrc:'/images/pagination.png' 
+    },
 
 ]

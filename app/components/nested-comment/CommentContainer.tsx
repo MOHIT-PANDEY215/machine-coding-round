@@ -30,7 +30,7 @@ const CommentContainer: React.FC<CommentContainerProps> = ({
       ref={commentContainerRef}
       className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600 w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg flex flex-col"
     >
-      <div className="flex flex-col gap-8 w-full">
+      <div className="flex flex-col gap-8 w-fit sm:w-full">
         {commentData.length > 0 ? (
           <>
             {commentData.map((comment) => (

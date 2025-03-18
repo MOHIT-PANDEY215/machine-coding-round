@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@heroui/react";
 import React, { useState } from "react";
-import { CommentDataProps } from "./GlobalContainer";
+import { CommentDataProps } from "./GlobalCommentContainer";
 
 interface InputContainerProps {
   commentData: CommentDataProps[];
@@ -22,7 +22,11 @@ const InputContainer: React.FC<InputContainerProps> = ({
 
   const handleSubmit = () => {
     console.log(commentData, parentId);
-    if (!text.trim()) return;
+    if (!text.trim()) {
+      setActiveCommentReplyId?.(null);
+      setText("");
+      return;
+    }
     const formattedId = new Intl.DateTimeFormat("en-GB", {
       day: "2-digit",
       month: "2-digit",
@@ -30,7 +34,7 @@ const InputContainer: React.FC<InputContainerProps> = ({
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
-      hour12: false, // 24-hour format
+      hour12: false,
     }).format(new Date());
 
     const newComment: CommentDataProps = {

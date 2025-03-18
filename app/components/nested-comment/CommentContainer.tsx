@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { CommentDataProps } from "./GlobalContainer";
+import React, { useState, useRef, useEffect } from "react";
+import { CommentDataProps } from "./GlobalCommentContainer";
 import Comment from "./Comment";
 
 interface CommentContainerProps {
@@ -12,23 +12,42 @@ const CommentContainer: React.FC<CommentContainerProps> = ({
   commentData,
   setCommentData,
 }) => {
-  const [activeCommentReplyId, setActiveCommentReplyId] =
-    useState<string|null>(null);
+  const [activeCommentReplyId, setActiveCommentReplyId] = useState<
+    string | null
+  >(null);
+  const commentContainerRef = useRef<HTMLDivElement | null>(null);
+
+  // Auto-scroll to right when replies increase
+  useEffect(() => {
+    if (commentContainerRef.current) {
+      commentContainerRef.current.scrollLeft =
+        commentContainerRef.current.scrollWidth;
+    }
+  }, [commentData]);
 
   return (
-    <div>
-      {commentData.map((comment) => {
-        return (
-          <Comment
-            key={comment.id}
-            comment={comment}
-            commentData={commentData}
-            setCommentData={setCommentData}
-            activeCommentReplyId={activeCommentReplyId}
-            setActiveCommentReplyId={setActiveCommentReplyId}
-          />
-        );
-      })}
+    <div
+      ref={commentContainerRef}
+      className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600 w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg flex flex-col"
+    >
+      <div className="flex flex-col gap-8 w-full">
+        {commentData.length > 0 ? (
+          <>
+            {commentData.map((comment) => (
+              <Comment
+                key={comment.id}
+                comment={comment}
+                commentData={commentData}
+                setCommentData={setCommentData}
+                activeCommentReplyId={activeCommentReplyId}
+                setActiveCommentReplyId={setActiveCommentReplyId}
+              />
+            ))}
+          </>
+        ) : (
+          <div>No comment available</div>
+        )}
+      </div>
     </div>
   );
 };

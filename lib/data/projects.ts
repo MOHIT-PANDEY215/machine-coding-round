@@ -24,5 +24,10 @@ export const Projects = [
         link:'/pagination',
         imageSrc:'/images/pagination.png' 
     },
+    {
+        title:'Memory Game',
+        link:'/memory-game',
+        imageSrc:'/images/memory-game.png' 
+    },
 
 ]

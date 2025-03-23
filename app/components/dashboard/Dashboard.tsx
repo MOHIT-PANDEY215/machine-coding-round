@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
                   {item.title}
                 </p>
               </CardHeader>
-              <CardBody className="overflow-hidden py-2 flex justify-center">
+              <CardBody className="overflow-hidden py-2 flex justify-center items-center">
                 <Image
                   alt="Project Preview"
                   className="object-cover rounded-xl w-full max-w-[280px] h-[180px] sm:h-[200px] lg:h-[220px]"

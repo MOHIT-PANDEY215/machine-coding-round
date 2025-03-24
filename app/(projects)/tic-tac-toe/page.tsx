@@ -1,12 +1,12 @@
+import Layout from "@/app/components/layout/Layout";
 import GlobalTicTacToeContainer from "@/app/components/tic-tac-toe/GlobalTicTacToeContainer";
 
 export default function page() {
   return (
     <>
-      <div className="flex flex-col gap-8 items-center w-full min-h-[calc(100vh-48px)] py-10">
-        <h2 className="text-xl">Tic Tac Toe</h2>
-        <GlobalTicTacToeContainer/>
-      </div>
+      <Layout title="Tic Tac Toe">
+        <GlobalTicTacToeContainer />
+      </Layout>
     </>
   );
 }

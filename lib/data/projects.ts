@@ -29,5 +29,10 @@ export const Projects = [
         link:'/memory-game',
         imageSrc:'/images/memory-game.png' 
     },
+    {
+        title:'Country Capital',
+        link:'/country-capital',
+        imageSrc:'/images/country-capital.png' 
+    },
 
 ]

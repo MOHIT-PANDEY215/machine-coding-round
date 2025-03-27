@@ -34,5 +34,10 @@ export const Projects = [
         link:'/country-capital',
         imageSrc:'/images/country-capital.png' 
     },
+    {
+        title:'OTP Input',
+        link:'/otp-input',
+        imageSrc:'/images/otp-input.png' 
+    },
 
 ]
